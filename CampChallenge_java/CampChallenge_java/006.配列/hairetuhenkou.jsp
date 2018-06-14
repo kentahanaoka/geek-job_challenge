@@ -1,6 +1,6 @@
 <%-- 
-    Document   : array list kadai
-    Created on : 2018/06/13, 15:28:27
+    Document   : hairetuhenkou
+    Created on : 2018/06/14, 13:27:46
     Author     : guest1Day
 --%>
 
@@ -23,6 +23,9 @@ datas.add("-20");
 datas.add("128");
 datas.add("END");
 
+datas.set(2,"33");
+
+
 out.print(datas.get(0));
 out.print(datas.get(1));
 out.print(datas.get(2));
@@ -31,17 +34,9 @@ out.print(datas.get(4));
 out.print(datas.get(5));
 out.print(datas.get(6));
 
-
-
-
-
-
-    
-    
-    
     
     %>
     <body>
-        <h1>Hello World!</h1>
+        <h1></h1>
     </body>
 </html>
