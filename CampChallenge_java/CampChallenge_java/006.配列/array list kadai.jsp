@@ -35,7 +35,7 @@ out.print(datas.get(6));
 
 
 
-out.print(datas.get(1));
+
     
     
     
