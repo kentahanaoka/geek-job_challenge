@@ -32,7 +32,7 @@ public class Method1 extends HttpServlet {
     void myprofile(PrintWriter pw) {
     pw.print("私の名前は花岡　健太です。<br>");
     pw.print("出身地は埼玉県所沢です。<br>");
-    pw.print("趣味はギターとカードゲームです。<br>");
+    pw.print("趣味はギターと動画投稿です。<br>");
 }
     
     
