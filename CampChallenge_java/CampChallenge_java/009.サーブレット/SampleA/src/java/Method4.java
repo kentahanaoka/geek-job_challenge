@@ -16,9 +16,15 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author guest1Day
  */
-@WebServlet(urlPatterns = {"/test"})
-public class test extends HttpServlet {
+@WebServlet(urlPatterns = {"/Method4"})
+public class Method4 extends HttpServlet {
 
+    int calculation(int num){
+    num=num+50;
+    return num;
+    }
+    
+    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -28,36 +34,26 @@ public class test extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    private float getTax(int money) {
-    return money * 0.08;
-}
-
-    
-    
-    
-    
+   
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
+          
             
-            int[] data = {300, 400, 500};
-
-    // 消費税を表示
-    out.print("消費税は、" + getTax(data[0]) + "円");
-    out.print("消費税は、" + getTax(data[1]) + "円");
-}
-
-            
-            
+            if (200<=calculation(50)){
+            out.print("200以上です。");}
+            else if(calculation(50)<100){out.print("100未満です。");}
+            else{out.print("100以上200未満です。");}
+                    
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet test</title>");            
+            out.println("<title>Servlet Method4</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet test at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet Method4 at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
