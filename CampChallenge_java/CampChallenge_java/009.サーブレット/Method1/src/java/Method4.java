@@ -16,8 +16,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author guest1Day
  */
-@WebServlet(urlPatterns = {"/Methed3"})
-public class Methed3 extends HttpServlet {
+@WebServlet(urlPatterns = {"/Method4"})
+public class Method4 extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -30,35 +30,33 @@ public class Methed3 extends HttpServlet {
      */
    
     
-    
+     void calculation(int num,int num2,PrintWriter pw){
+    num=num+num2;
    
-    
-    void multiplication(int num,int num2,boolean result,PrintWriter pw){
-       int num3=num*num2;   
-        if (result==true){
-           pw.print("num3*2");
-         }else{pw.print(num3);}
+  if(200<=num){pw.print("200以上です");}
+  else if(num<100){pw.print("100未満です");}
+  else{pw.print("100以上200未満です");}
     }
-        
-        void multiplication(PrintWriter pw) {
-            multiplication(1,1,true,pw);
-        }
     
+      void calculation(PrintWriter pw) {
+            calculation(1,1,pw);
+        } 
     
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+   protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            
-            
+            /* TODO output your page here. You may use following sample code. */ 
+       
+          calculation(out);
+         
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Methed3</title>");            
+            out.println("<title>Servlet Method4</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet Methed3 at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet Method4 at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
