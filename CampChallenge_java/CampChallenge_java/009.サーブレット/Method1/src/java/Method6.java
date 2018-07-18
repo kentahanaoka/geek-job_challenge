@@ -6,6 +6,7 @@
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Arrays;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,8 +17,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author guest1Day
  */
-@WebServlet(urlPatterns = {"/Test"})
-public class Test extends HttpServlet {
+@WebServlet(urlPatterns = {"/Method6"})
+public class Method6 extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -28,33 +29,55 @@ public class Test extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
- boolean checkPlus(int num) {
-    if (num >= 0) { return true; }
-    else { return false; }
-}
-    
+   
+ String userProfile(int num)[]{
+      
      
+  String name1[]={"1","技育太郎","東京","男","プログラマー"};  
+  String name2[]={"2","技育花子","北海道","女","システムエンジニア"}; 
+  String name3[]={"3","技育三郎","大阪","男","Webエンジニア"}; 
+  
+  String num2=String.valueOf(num);
+ 
+  if(num2.equals(name1[0])){
+  return name1;
+  }
+  else if(num2.equals(name2[0])){
+  return name2;
+  }
+  else if(num2.equals(name3[0])){
+  return name3;
+  }
+  else{return null;}
+
+ }
+ 
+  
+  
+ 
+    
+
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             
-              
-     if (checkPlus(100)) {
-        out.print("プラス値です！");
-    } else {
-        out.print("マイナス値です！");
-    }
-
+        
             
+         for ( int i = 1; i <= 4; i++) {
+           out.print(userProfile(2)[i]);
+}
+         
+         
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Test</title>");            
+            out.println("<title>Servlet Method6</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet Test at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet Method6 at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -98,5 +121,9 @@ public class Test extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
+    private void print(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 }
