@@ -57,15 +57,22 @@ public class Method8 extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             
-           String[] ary=  userprofile(2);
-          for ( int i = 1; i <= 4; i++) {
+          // String[] ary=  userprofile(2);
+          
+          int total=0;
+          
+          for (int i = 1; i <= 4; i++) {
+          
+          out.print(userprofile(1)[i]+"\r\n""\r\n");
          
-         out.print(userprofile(1)[i]);
-         out.print(userprofile(2)[i]);
-         out.print(userprofile(3)[i]);
-        }
-         
-        
+          }
+         for (int a = 1; a <= 4; a++) {
+         out.print(userprofile(2)[a]);
+          }
+          
+         for (int c= 1; c<= 4; c++) {
+         out.print(userprofile(3)[c]);
+          }
             
     
             
