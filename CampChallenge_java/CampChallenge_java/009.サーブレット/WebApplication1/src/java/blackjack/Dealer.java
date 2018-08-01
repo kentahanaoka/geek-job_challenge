@@ -22,7 +22,14 @@ import java.util.List;
         
         for(int i= 1;i<=4;i++){
             for(int j= 1;j<=13;j++){
-                cards.add(j);
+                if(j>10){
+                    cards.add(10);
+                } else {
+                    cards.add(j);  
+                }    
+                 
+                
+               
             }
         }
     }
