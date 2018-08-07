@@ -17,20 +17,14 @@ public class hiyouzilyunclass4 {
     public static void main(String[] args) {
     
     Date c = new Date(115,0,1,0,0,0);
-    //c.set(2015,0,1,0,0,0);
+  
     
     Date k = new Date(115,11,31,23,59,59);
-   // k.set(2015,11,31,23,59,59); 
+  
    
    int i=(int) (k.getTime()-c.getTime());
-    //k.add(Calendar.YEAR, -c.YEAR); 	
-    //k.add(Calendar.MONTH, -c.MONTH); 	
-    //k.add(Calendar.DAY_OF_MONTH, -c.DAY_OF_MONTH);
-    //k.add(Calendar.HOUR_OF_DAY, -c.HOUR_OF_DAY); 
    
-    //k.add(Calendar.MINUTE, -c.MINUTE); 
-    //k.add(Calendar.SECOND, -c.SECOND);  
-    System.out.print(k.getTime());
+    System.out.print(i);
      
     }
 }
